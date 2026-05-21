@@ -104,6 +104,17 @@
       margin-bottom: 2px;
     }
     .profile-row .value { font-size: 0.9rem; color: #555; }
+    .profile-row .value a {
+      color: var(--navy);
+      font-weight: 500;
+      border-bottom: 1px solid rgba(26, 40, 69, 0.35);
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .profile-row .value a:hover {
+      color: #0f6fbf;
+      border-bottom-color: #0f6fbf;
+    }
 
     /* === Section base === */
     section { padding: 90px 24px; }
