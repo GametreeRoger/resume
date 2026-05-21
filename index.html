@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>張又壬 Roger Chang — Unity 軟體工程師</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 48px 0 36px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    header .subtitle {
+      margin-top: 6px;
+      font-size: 1.05rem;
+      color: #a0aec0;
+      letter-spacing: 0.06em;
+    }
+    header .contacts {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    header .contacts a {
+      color: #90cdf4;
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    header .contacts a:hover { color: #fff; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Section ── */
+    section { margin-bottom: 44px; }
+    .section-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #1a1a2e;
+      border-bottom: 2px solid #1a1a2e;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    /* ── About ── */
+    .about-text { color: #444; font-size: 0.97rem; }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .skill-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .skill-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #718096;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .skill-value { font-size: 0.92rem; color: #2d3748; }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 28px; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .job-company {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .job-duration {
+      font-size: 0.85rem;
+      color: #718096;
+    }
+    .job-desc { font-size: 0.95rem; color: #444; }
+    .job-sub {
+      margin-top: 12px;
+      padding-left: 16px;
+      border-left: 3px solid #e2e8f0;
+    }
+    .job-sub-title {
+      font-weight: 700;
+      color: #2d3748;
+      font-size: 0.93rem;
+      margin-bottom: 4px;
+      margin-top: 12px;
+    }
+    .job-sub-title:first-child { margin-top: 0; }
+    .job-sub p { font-size: 0.92rem; color: #555; }
+
+    /* ── Upskilling ── */
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #1a1a2e;
+      border-radius: 8px;
+      padding: 18px 20px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* ── Traits ── */
+    .traits-text { font-size: 0.95rem; color: #444; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      padding: 24px;
+    }
+
+    @media (max-width: 540px) {
+      header h1 { font-size: 1.6rem; }
+      .job-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>張又壬 &nbsp;Roger Chang</h1>
+  <p class="subtitle">Unity 軟體工程師 ・ 15 年以上開發經歷</p>
+  <nav class="contacts">
+    <a href="mailto:d9352676@gmail.com">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      d9352676@gmail.com
+    </a>
+    <a href="https://github.com/GametreeRoger" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
+      github.com/GametreeRoger
+    </a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- 個人背景 -->
+  <section>
+    <p class="section-title">關於我</p>
+    <p class="about-text">
+      畢業於逢甲大學資訊工程學系，專精於 Unity 引擎開發已超過 15 年。受到從事資訊產業的父親啟蒙，對程式開發擁有深厚熱忱。從 Online Game 時代跨越到 Mobile Game 與 AI 應用開發，始終保持高度學習力，確保技術堆疊能解決當代開發最核心的挑戰。
+    </p>
+  </section>
+
+  <!-- 核心技能 -->
+  <section>
+    <p class="section-title">核心技能</p>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <p class="skill-label">引擎與語言</p>
+        <p class="skill-value">Unity（2018 ~ 2022 LTS）、C#、Swift、Objective-C</p>
+      </div>
+      <div class="skill-item">
+        <p class="skill-label">架構與設計模式</p>
+        <p class="skill-value">MVP、Strategy、Factory、Adapter Pattern、StateMachine</p>
+      </div>
+      <div class="skill-item">
+        <p class="skill-label">平台整合</p>
+        <p class="skill-value">iOS、Android；Unity ↔ Native（Framework 封裝、橋接層開發）</p>
+      </div>
+      <div class="skill-item">
+        <p class="skill-label">開發工具</p>
+        <p class="skill-value">Git、Xcode、Android Studio</p>
+      </div>
+      <div class="skill-item">
+        <p class="skill-label">AI 輔助工具</p>
+        <p class="skill-value">Claude Code（CLI）、Claude Cowork</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作經歷 -->
+  <section>
+    <p class="section-title">工作經歷</p>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">樂苗文創多媒體</span>
+        <span class="job-duration">9 年 3 個月</span>
+      </div>
+      <p class="job-desc">深耕跨平台整合技術，並在專案演進中持續提升技術層次。</p>
+      <div class="job-sub">
+        <p class="job-sub-title">國際 IP 與 Native 整合</p>
+        <p>負責《迪士尼魔法塗色》、《米菲的世界》、《毛毛蟲幼兒園》、《樂高®得寶®世界》等國際知名 IP 的在地化與上架工作，上架覆蓋多個亞太市場。鑽研 iOS 原生開發（Swift / Objective-C），成功開發並封裝 Framework，實現 Unity 與 Native 層之間的穩定橋接。</p>
+        <p class="job-sub-title">架構實踐與轉型</p>
+        <p>職涯後期參與一款 AI 語言學習軟體的完整開發，歷時約一年。軟體支援英文、日文、韓文學習，核心功能是讓使用者以目標語言與 AI 在設定好的主題情境中進行對話練習，技術門檻與產品複雜度皆為個人職涯之最。專案期間，公司引進架構經驗豐富的資深工程師帶領重整架構，讓我得以在實戰中深入掌握 MVP 架構，並以 StateMachine 管理詞彙練習小遊戲中多個階段之間的流程切換。在資深同事主導的架構下，我深入學習了多種設計模式的實際應用：AI 對話功能有多種模式，介面相近但行為各異，透過 Strategy Pattern 封裝差異邏輯，並以 Factory Pattern 在進入 Presenter 時組裝對應資料與 Strategy；Adapter Pattern 則用於將後端資料轉換為 View 層所需的顯示格式。雖然最終因公司結束營運而未能上架，但這段經歷是我技術成長最密集的階段。</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">派樂數位遊戲</span>
+        <span class="job-duration">2 年 9 個月</span>
+      </div>
+      <p class="job-desc">在精簡的高效率團隊中，獨立負責《森林英雄》、《挑戰金頭腦》及《熊熊躲貓貓》三款遊戲的開發。從核心功能開發到資源整合皆一手包辦，培養了極強的獨立作業與問題排除能力，三款遊戲皆順利上架 iOS 與 Android 雙平台。</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">中華網龍</span>
+        <span class="job-duration">3 年 4 個月</span>
+      </div>
+      <p class="job-desc">進入遊戲產業的重要階段。深入掌握 Unity 與 C# 應用，參與開發《聖劍Online》及《三國鼎立 Web & 手持版》等多款專案，完整經歷遊戲從 PC 轉向行動裝置的技術轉型期，奠定紮實的遊戲開發功底。</p>
+    </div>
+  </section>
+
+  <!-- 職涯轉換期間 -->
+  <section>
+    <p class="section-title">持續精進</p>
+    <div class="card">
+      在職涯轉換期間，主動學習 AI 輔助開發工具，包括 Claude Code（CLI 工具）與 Claude Cowork，將 AI 工作流程實際整合進日常開發習慣，應用於程式碼審查、架構規劃與技術文件撰寫。深刻體會到 AI 工具對開發效率的實質提升，也具備了在 AI 協作環境下持續產出高品質成果的能力。
+    </div>
+  </section>
+
+  <!-- 個人特質 -->
+  <section>
+    <p class="section-title">個人特質與優勢</p>
+    <p class="traits-text">
+      超過 15 年的 Unity 開發資歷，對引擎特性與各種常見問題具備直覺且精準的判斷力。重視程式碼的穩定性與結構，擅長與企劃、美術及 PM 溝通，能快速收斂開發需求、減少來回成本。雖然過去作品多已下架或因故未能上市，但每段經歷都紮實地累積在技術底層，面試時很樂意針對具體專案深入交流。
+    </p>
+  </section>
+
+  <!-- 求學 -->
+  <section>
+    <p class="section-title">學歷與技術基礎</p>
+    <p class="traits-text">
+      逢甲大學 資訊工程學系。大學期間深入參與網際網路學程，並在畢業專題中實作封包攔截與通訊協議解碼，奠定對網路架構與 Client-Server 傳輸的紮實基礎，使日後處理遊戲連線與 API 整合時具備更全面的技術視角。
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 張又壬 Roger Chang
+</footer>
+
+</body>
+</html>
