@@ -21,6 +21,16 @@
       padding: 48px 0 36px;
       text-align: center;
     }
+    header .avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 30%;
+      border: 3px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      margin-bottom: 18px;
+    }
     header h1 {
       font-size: 2.2rem;
       font-weight: 700;
@@ -143,6 +153,34 @@
     /* ── Traits ── */
     .traits-text { font-size: 0.95rem; color: #444; }
 
+    /* ── Life ── */
+    .life-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px 22px;
+    }
+    .life-card img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .life-card .life-text {
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .life-card .life-quote {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+
     /* ── Footer ── */
     footer {
       text-align: center;
@@ -153,13 +191,16 @@
 
     @media (max-width: 540px) {
       header h1 { font-size: 1.6rem; }
+      header .avatar { width: 104px; height: 104px; }
       .job-header { flex-direction: column; }
+      .life-card { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
 
 <header>
+  <img class="avatar" src="dessert.jpg" alt="張又壬 Roger Chang 個人照" />
   <h1>張又壬 &nbsp;Roger Chang</h1>
   <p class="subtitle">Unity 軟體工程師 ・ 15 年以上開發經歷</p>
   <nav class="contacts">
@@ -268,6 +309,18 @@
     <p class="traits-text">
       逢甲大學 資訊工程學系。大學期間深入參與網際網路學程，並在畢業專題中實作封包攔截與通訊協議解碼，奠定對網路架構與 Client-Server 傳輸的紮實基礎，使日後處理遊戲連線與 API 整合時具備更全面的技術視角。
     </p>
+  </section>
+
+  <!-- 工作之外 -->
+  <section>
+    <p class="section-title">工作之外</p>
+    <div class="life-card">
+      <img src="selfie.jpg" alt="Roger 與美食合照" />
+      <div class="life-text">
+        <p class="life-quote">離不開美食的人。</p>
+        <p>寫程式之外，最大的興趣就是探索餐廳與咖啡廳。對細節的觀察力與耐心，常常從一份甜點或一個漢堡開始。</p>
+      </div>
+    </div>
   </section>
 
 </div>
